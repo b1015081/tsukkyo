@@ -1,0 +1,488 @@
+body {
+  width: 1280px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #000;
+  font-family: 'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,sans-serif;
+}
+
+.global-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 40px 0 20px;
+}
+
+.global-nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.global-nav .menu li {
+  padding-top: 5px;
+  padding-right: 35px;
+}
+
+.global-nav .menu li:last-child {
+  padding-right: 0;
+}
+
+.global-nav .menu li a {
+  display: block;
+}
+
+.global-nav .sns-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 20px 0 50px;
+}
+
+.global-nav .sns-link li {
+  padding-right: 20px;
+}
+
+.global-nav .sns-link li:last-child {
+  padding-right: 0;
+}
+
+.global-nav .sns-link img {
+  height: 24px;
+}
+
+#main .main-visual {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#main .main-visual .header-title {
+  font-size: 23px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  margin-right: 32px;
+  text-align: center;
+}
+
+#main .main-visual .main-visual-box img {
+  width: 1200px;
+}
+
+.layout h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 36px;
+  font-weight: 200;
+  margin-top: 150px;
+}
+
+.layout h2::before, .layout h2::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+}
+
+.layout h2::before {
+  margin-right: 24px;
+}
+
+.layout h2::after {
+  margin-left: 24px;
+}
+
+.layout .about-color::before, .layout .about-color::after {
+  background-color: #c21ce1;
+}
+
+.layout .skills-color::before, .layout .skills-color::after {
+  background-color: #ffcc27;
+}
+
+.layout .works-color::before, .layout .works-color::after {
+  background-color: #1cc6e1;
+}
+
+.introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 80px;
+}
+
+.introduction .introduction-sentence {
+  width: 536px;
+  margin: 0 64px 0 80px;
+}
+
+.introduction .introduction-sentence .nickname {
+  margin-bottom: 3px;
+  font-size: 18px;
+}
+
+.introduction .introduction-sentence .full-name {
+  margin-bottom: 4px;
+  font-size: 26px;
+}
+
+.introduction .introduction-sentence .english-name {
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.introduction .introduction-sentence .profile {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.introduction .introduction-sentence .sns-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.introduction .introduction-sentence .sns-link li {
+  padding-right: 20px;
+}
+
+.introduction .introduction-sentence .sns-link li:last-child {
+  padding-right: 0;
+}
+
+.introduction .introduction-sentence .sns-link img {
+  height: 24px;
+}
+
+.introduction .introduction-img img {
+  width: 600px;
+}
+
+#skills .skills-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 70px;
+}
+
+#skills .skills-box .skills-item {
+  width: 320px;
+  margin: 40px;
+}
+
+#skills .skills-box .skills-item:nth-child(4), #skills .skills-box .skills-item:nth-child(5) {
+  margin-bottom: 0;
+}
+
+#skills .skills-box .skills-item .item-title {
+  margin-bottom: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#skills .skills-box .skills-item .item-img {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#skills .skills-box .skills-item .item-img img {
+  width: auto;
+  height: 60px;
+}
+
+#skills .skills-box .skills-item .item-coding img {
+  width: 60px;
+  height: auto;
+  padding: 10px 0;
+}
+
+#skills .skills-box .skills-item .item-sentence {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#skills .skills-box .skills-item .skill-icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 320px;
+  margin: 0 auto;
+}
+
+#skills .skills-box .skills-item .skill-icon-list .skill-icon-item {
+  margin: 0 12px 40px;
+}
+
+#skills .skills-box .skills-item .skill-icon-list .skill-icon-item .skill-icon-img {
+  width: 80px;
+  height: auto;
+}
+
+#skills .skills-box .skills-item .skill-icon-list .skill-icon-item .skill-icon-title {
+  font-size: 14px;
+  text-align: center;
+}
+
+#skills .skills-box .skills-item .skill-icon-list .skill-icon-item .level-img {
+  display: block;
+  margin: 10px auto 0;
+}
+
+#works .works-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 1260px;
+  margin: 80px auto 100px;
+}
+
+#works .works-list .works-item {
+  margin: 10px;
+}
+
+#works .works-list .works-item img {
+  width: 400px;
+  height: auto;
+}
+
+.works-wrap .works-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.works-wrap .works-heading::before, .works-wrap .works-heading::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: #1cc6e1;
+}
+
+.works-wrap .works-heading::before {
+  margin-right: 10px;
+}
+
+.works-wrap .works-heading::after {
+  margin-left: 10px;
+}
+
+.works-wrap .works-title {
+  margin-top: 60px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.works-wrap .works-sentence {
+  width: 800px;
+  margin: 50px auto 0;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.works-wrap .works-skills-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 80px;
+}
+
+.works-wrap .works-skills-list .works-skills-item {
+  width: 300px;
+  margin: 0 20px;
+}
+
+.works-wrap .works-skills-list .works-skills-item .works-item-title {
+  margin-bottom: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.works-wrap .works-skills-list .works-skills-item .works-skill-icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.works-wrap .works-skills-list .works-skills-item .works-skill-icon-list .works-skill-icon-item {
+  margin: 0 5px;
+}
+
+.works-wrap .works-skills-list .works-skills-item .works-skill-icon-list .works-skill-icon-item .works-skill-icon-img {
+  width: 80px;
+  height: auto;
+}
+
+.works-wrap .works-skills-list .works-skills-item .works-skill-icon-list .works-skill-icon-item .works-skill-icon-title {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.works-wrap .works-contents {
+  width: 1000px;
+  margin: 120px auto;
+}
+
+.works-wrap .works-contents .works-contents-list .works-contents-item {
+  margin: 0 auto 30px;
+}
+
+.works-wrap .works-contents .works-contents-list .works-contents-item:last-child {
+  margin-bottom: 0;
+}
+
+.works-wrap .works-contents .works-contents-list .works-contents-item .works-contents-img {
+  display: block;
+  width: 1000px;
+}
+
+.works-wrap .external-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.works-wrap .external-link .external-link-word {
+  color: #1492e6;
+}
+
+.works-wrap .external-link .external-link-img {
+  margin-left: 7px;
+}
+
+.works-wrap .top-link {
+  margin-bottom: 14px;
+}
+
+.works-wrap .under-link {
+  margin-top: 14px;
+}
+
+.works-wrap .works-contents-prm {
+  width: 375px;
+  margin: 120px auto;
+}
+
+.works-wrap .works-contents-prm .works-contents-prm-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.works-wrap .works-contents-bescos {
+  width: 1000px;
+  margin: 120px auto;
+}
+
+.works-wrap .works-contents-bescos .works-contents-bescos-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.works-wrap .works-contents-bescos .works-contents-bescos-list .works-contents-bescos-item {
+  margin: 0 60px;
+}
+
+.works-wrap .works-contents-bescos .works-contents-bescos-list .works-contents-bescos-item:last-child {
+  margin-top: 80px;
+}
+
+.works-wrap .works-contents-bescos .works-contents-bescos-list .works-contents-bescos-item .works-contents-bescos-img {
+  display: block;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.works-wrap .works-contents-banner {
+  width: 1000px;
+  margin: 120px auto;
+}
+
+.works-wrap .works-contents-banner .works-contents-banner-list .works-contents-banner-item:last-child {
+  margin-top: 80px;
+}
+
+.works-wrap .works-contents-banner .works-contents-banner-list .works-contents-banner-item .works-contents-banner-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.works-wrap .works-contents-banner .works-contents-banner-list .works-contents-banner-item .mens-cosme-banner {
+  width: 400px;
+}
+
+.works-wrap .works-contents-banner .works-contents-banner-list .works-contents-banner-item .mens-cosme-banner-long {
+  width: 640px;
+}
+
+.works-wrap .works-contents-banner .works-contents-banner-list .works-contents-banner-item .atcosme-app-banner {
+  width: 800px;
+}
+
+.works-wrap .works-contents-banner .works-contents-banner-list .works-contents-banner-item .beautyday-banner {
+  width: 400px;
+}
+
+.copyright {
+  margin-bottom: 20px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

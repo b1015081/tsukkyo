@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+#main {
+    .main-visual {
+        display: flex;
+        justify-content: flex-end;
+        .header-title {
+            font-size: 23px;
+            writing-mode: vertical-rl;
+            margin-right: 32px;
+            text-align: center;
+        }
+        .main-visual-box {
+            img {
+                width: 1200px;
+            }
+        }
+    }
+}
