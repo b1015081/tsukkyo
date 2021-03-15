@@ -6,7 +6,14 @@ body {
   font-family: 'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,sans-serif;
 }
 
-.global-nav {
+#header {
+  position: fixed;
+  top: 0;
+  width: 1280px;
+  background-color: #000;
+}
+
+#header .global-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,42 +23,46 @@ body {
   padding: 40px 0 20px;
 }
 
-.global-nav .menu {
+#header .global-nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.global-nav .menu li {
+#header .global-nav .menu li {
   padding-top: 5px;
   padding-right: 35px;
 }
 
-.global-nav .menu li:last-child {
+#header .global-nav .menu li:last-child {
   padding-right: 0;
 }
 
-.global-nav .menu li a {
+#header .global-nav .menu li a {
   display: block;
 }
 
-.global-nav .sns-link {
+#header .global-nav .sns-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 20px 0 50px;
 }
 
-.global-nav .sns-link li {
+#header .global-nav .sns-link li {
   padding-right: 20px;
 }
 
-.global-nav .sns-link li:last-child {
+#header .global-nav .sns-link li:last-child {
   padding-right: 0;
 }
 
-.global-nav .sns-link img {
+#header .global-nav .sns-link img {
   height: 24px;
+}
+
+#main {
+  padding-top: 85px;
 }
 
 #main .main-visual {
@@ -286,7 +297,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 40px;
+  margin-top: 100px;
   font-size: 24px;
   text-align: center;
 }
