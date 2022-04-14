@@ -549,6 +549,7 @@ body {
 }
 
 #skills .skills-box .skills-item .skill-icon-list .skill-icon-item .skill-icon-title {
+  margin-top: 5px;
   font-size: 14px;
   text-align: center;
 }
