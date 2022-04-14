@@ -1,44 +1,86 @@
 @charset 'utf-8';
 
+@import "variables";
+
 .introduction {
-    display: flex;
-    align-items: center;
-    margin-top: 80px;
-    .introduction-sentence {
-        width: 536px;
-        margin: 0 64px 0 80px;
-        .nickname {
-            margin-bottom: 3px;
-            font-size: 18px;
-        }
-        .full-name {
-            margin-bottom: 4px;
-            font-size: 26px;
-        }
-        .english-name {
-            margin-bottom: 40px;
-            font-size: 18px;
-        }
-        .profile {
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        .sns-link {
-            display: flex;
-            li {
-            padding-right: 20px;
-            &:last-child {
-            padding-right: 0;
-            }
-            }
-            img {
-                height: 24px;
-            }
-        }
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  @include mq-up("md") {
+    display: block;
+  }
+  @include mq-up("sm") {
+    display: block;
+    margin-top: 40px;
+  }
+  .introduction-sentence {
+    width: 536px;
+    margin: 0 64px 0 80px;
+    @include mq-up("md") {
+      width: auto;
+      margin: 0 100px 50px;
     }
-    .introduction-img {
-        img {
-            width: 600px;
-        }
+    @include mq-up("sm") {
+      width: auto;
+      margin: 0 20px 40px;
     }
+    .nickname {
+      margin-bottom: 3px;
+      font-size: 18px;
+      @include mq-up("sm") {
+        font-size: 14px;
+      }
+    }
+    .full-name {
+      margin-bottom: 4px;
+      font-size: 26px;
+      @include mq-up("sm") {
+        font-size: 22px;
+      }
+    }
+    .english-name {
+      margin-bottom: 40px;
+      font-size: 18px;
+      @include mq-up("sm") {
+        font-size: 14px;
+      }
+    }
+    .profile {
+      margin-bottom: 30px;
+      line-height: 1.6;
+      @include mq-up("sm") {
+        font-size: 14px;
+      }
+    }
+    .sns-link {
+      display: flex;
+      li {
+        padding-right: 20px;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+      img {
+        height: 24px;
+      }
+    }
+  }
+  .introduction-img {
+    @include mq-up("md") {
+      margin: 0 100px;
+    }
+    @include mq-up("sm") {
+      margin: 0 auto;
+    }
+    img {
+      width: 600px;
+      @include mq-up("md") {
+        display: block;
+        width: 100%;
+      }
+      @include mq-up("sm") {
+        width: 100%;
+      }
+    }
+  }
 }

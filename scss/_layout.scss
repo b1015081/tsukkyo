@@ -1,42 +1,52 @@
 @charset 'utf-8';
 
+@import "variables";
+
 .layout {
-    h2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 36px;
-        font-weight: 200;
-        padding-top: 150px;
-        &::before,
-        &::after {
-            content: "";
-            width: 60px;
-            height: 1px;
-        }
-        &::before {
-            margin-right: 24px;
-        }
-        &::after {
-            margin-left: 24px;
-        }
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 200;
+    padding-top: 150px;
+    @include mq-up("md") {
+      padding-top: 100px;
     }
-    .about-color {
-        &::before,
-        &::after {
-            background-color: #c21ce1;
-        }
+    @include mq-up("sm") {
+      padding-top: 70px;
+      font-size: 22px;
+      font-weight: 300;
     }
-    .skills-color {
-        &::before,
-        &::after {
-            background-color: #ffcc27;
-        }
+    &::before,
+    &::after {
+      content: "";
+      width: 60px;
+      height: 1px;
     }
-    .works-color {
-        &::before,
-        &::after {
-            background-color: #1cc6e1;
-        }
+    &::before {
+      margin-right: 24px;
     }
+    &::after {
+      margin-left: 24px;
+    }
+  }
+  .about-color {
+    &::before,
+    &::after {
+      background-color: #c21ce1;
+    }
+  }
+  .skills-color {
+    &::before,
+    &::after {
+      background-color: #ffcc27;
+    }
+  }
+  .works-color {
+    &::before,
+    &::after {
+      background-color: #1cc6e1;
+    }
+  }
 }

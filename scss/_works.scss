@@ -1,181 +1,355 @@
 @charset 'utf-8';
 
+@import "variables";
+
 #works {
-    .works-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        width: 1260px;
-        margin: 80px auto 100px;
-        .works-item {
-            margin: 10px;
-            img {
-                width: 400px;
-                height: auto;
-            }
-        }
+  .works-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 1260px;
+    margin: 80px auto 100px;
+    @include mq-up("md") {
+      width: 600px;
+      margin: 80px auto 100px;
     }
+    @include mq-up("sm") {
+      width: 100%;
+      margin: 40px auto 70px;
+    }
+    .works-item {
+      margin: 10px;
+      @include mq-up("md") {
+        margin: 0 0 20px;
+      }
+      @include mq-up("sm") {
+        margin: 0 20px 10px;
+      }
+      img {
+        width: 400px;
+        height: auto;
+        @include mq-up("md") {
+          width: 600px;
+        }
+        @include mq-up("sm") {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 .works-wrap {
-    .works-heading {
+  width: 1280px;
+  margin: 0 auto;
+  @include mq-up("md") {
+    width: 600px;
+    margin: 0 auto;
+  }
+  @include mq-up("sm") {
+    width: 100%;
+  }
+  .works-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-size: 24px;
+    text-align: center;
+    &::before,
+    &::after {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background-color: #1cc6e1;
+    }
+    &::before {
+      margin-right: 10px;
+    }
+    &::after {
+      margin-left: 10px;
+    }
+    @include mq-up("md") {
+      margin: 100px 20px 0;
+    }
+    @include mq-up("sm") {
+      margin: 70px 20px 0;
+      font-size: 18px;
+    }
+  }
+  .works-title {
+    margin-top: 60px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    @include mq-up("md") {
+      margin: 60px 20px 0;
+    }
+    @include mq-up("sm") {
+      margin: 50px 20px 0;
+      font-size: 22px;
+    }
+  }
+  .works-sentence {
+    width: 800px;
+    margin: 50px auto 0;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+    @include mq-up("md") {
+      width: auto;
+      margin: 50px 20px 0;
+    }
+    @include mq-up("sm") {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+  .works-skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    .works-skills-item {
+      width: 300px;
+      margin: 0 20px 40px;
+      @include mq-up("md") {
+        width: 250px;
+      }
+      @include mq-up("sm") {
+        margin: 0 20px 60px;
+      }
+      .works-item-title {
+        margin-bottom: 30px;
+        font-size: 16px;
+        text-align: center;
+      }
+      .works-skill-icon-list {
         display: flex;
         justify-content: center;
-        align-items: center;
-        margin-top: 100px;
-        font-size: 24px;
-        text-align: center;
-        &::before,
-        &::after {
-            content: "";
-            width: 30px;
-            height: 1px;
-            background-color: #1cc6e1;
+        width: 300px;
+        margin: 0 auto;
+        @include mq-up("md") {
+          width: 250px;
         }
-        &::before {
-            margin-right: 10px;
+        .works-skill-icon-item {
+          margin: 0 5px;
+          .works-skill-icon-img {
+            width: 80px;
+            height: auto;
+          }
+          .works-skill-icon-title {
+            margin-top: 5px;
+            font-size: 14px;
+            text-align: center;
+          }
         }
-        &::after {
-            margin-left: 10px;
+      }
+    }
+  }
+  .works-contents {
+    width: 1000px;
+    margin: 120px auto;
+    @include mq-up("md") {
+      width: 375px;
+      margin: 80px auto;
+    }
+    @include mq-up("sm") {
+      width: auto;
+      margin: 60px 20px;
+    }
+    .works-contents-list {
+      @include mq-up("md") {
+        margin: 0 auto;
+      }
+      .works-contents-item {
+        margin: 0 auto 30px;
+        @include mq-up("md") {
+          display: none;
         }
-    }
-    .works-title {
-        margin-top: 60px;
-        font-size: 36px;
-        font-weight: bold;
-        text-align: center;
-    }
-    .works-sentence {
-        width: 800px;
-        margin: 50px auto 0;
-        font-size: 15px;
-        line-height: 1.6;
-        text-align: center;
-    }
-    .works-skills-list {
-        display: flex;
-        justify-content: center;
-        margin-top: 80px;
-        .works-skills-item {
-            width: 300px;
-            margin: 0 20px;
-            .works-item-title {
-                margin-bottom: 30px;
-                font-size: 16px;
-                text-align: center;
-            }
-            .works-skill-icon-list {
-                display: flex;
-                justify-content: center;
-                width: 300px;
-                margin: 0 auto;
-                .works-skill-icon-item {
-                    margin: 0 5px;
-                    .works-skill-icon-img{
-                        width: 80px;
-                        height: auto;
-                    }
-                    .works-skill-icon-title {
-                        margin-top: 5px;
-                        font-size: 14px;
-                        text-align: center;
-                    }
-                }
-            }
+        &:last-child {
+          margin-bottom: 0;
         }
-    }
-    .works-contents {
-        width: 1000px;
-        margin: 120px auto;
-        .works-contents-list {
-            .works-contents-item {
-                margin: 0 auto 30px;
-                &:last-child {
-                    margin-bottom: 0;
-                }
-                .works-contents-img {
-                    display: block;
-                    width: 1000px;
-                }
-            }
+        .works-contents-img {
+          display: block;
+          width: 1000px;
         }
-    }
-    //外部リンク
-    .external-link {
-        display: flex;
-        justify-content: flex-end;
-        .external-link-word {
-            color: #1492e6;
+      }
+      .works-contents-item-sp {
+        display: none;
+        @include mq-up("md") {
+          display: block;
+          margin: 0 auto 30px;
         }
-        .external-link-img {
-            margin-left: 7px;
+        &:last-child {
+          @include mq-up("md") {
+            margin-bottom: 0;
+          }
         }
-    }
-    .top-link {
-        margin-bottom: 14px;
-    }
-    .under-link {
-        margin-top: 14px;
-    }
-    //works-premium.html 専用スタイル
-    .works-contents-prm {
-        width: 375px;
-        margin: 120px auto;
-        .works-contents-prm-img {
-            display: block;
+        .works-contents-img {
+          display: block;
+          width: 375px;
+          margin: 0 auto 30px;
+          @include mq-up("md") {
+            width: 100%;
             margin: 0 auto;
+          }
+          @include mq-up("sm") {
+            width: 100%;
+          }
         }
+      }
     }
-    //works-bescos.html 専用スタイル
-    .works-contents-bescos {
-        width: 1000px;
-        margin: 120px auto;
-        .works-contents-bescos-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            .works-contents-bescos-item {
-                margin: 0 60px;
-                &:last-child {
-                    margin-top: 80px;
-                }
-                .works-contents-bescos-img {
-                    display: block;
-                    width: 350px;
-                    margin: 0 auto;
-                }
-            }
+  }
+  //外部リンク
+  .external-link {
+    display: flex;
+    justify-content: flex-end;
+    .external-link-word {
+      color: #1492e6;
+    }
+    .external-link-img {
+      margin-left: 7px;
+    }
+  }
+  .top-link {
+    margin-bottom: 14px;
+  }
+  .under-link {
+    margin-top: 14px;
+  }
+  //works-premium.html 専用スタイル
+  .works-contents-prm {
+    width: 375px;
+    margin: 120px auto;
+    @include mq-up("md") {
+      margin: 80px auto;
+    }
+    @include mq-up("sm") {
+      width: auto;
+      margin: 60px 20px;
+    }
+    .works-contents-prm-img {
+      display: block;
+      margin: 0 auto;
+      @include mq-up("sm") {
+        width: 100%;
+      }
+    }
+  }
+  //works-bescos.html 専用スタイル
+  .works-contents-bescos {
+    width: 1000px;
+    margin: 120px auto;
+    @include mq-up("md") {
+      width: 375px;
+      margin: 80px auto;
+    }
+    @include mq-up("sm") {
+      width: auto;
+      margin: 60px 20px;
+    }
+    .works-contents-bescos-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .works-contents-bescos-item {
+        margin: 0 60px;
+        @include mq-up("md") {
+          margin: 0 auto 40px;
         }
-    }
-    //banner 専用スタイル
-    .works-contents-banner {
-        width: 1000px;
-        margin: 120px auto;
-        .works-contents-banner-list {
-            .works-contents-banner-item {
-                &:last-child {
-                    margin-top: 80px;
-                }
-                .works-contents-banner-img {
-                    display: block;
-                    margin: 0 auto;
-                }
-                //メンズコスメバナー
-                .mens-cosme-banner {
-                    width: 400px;
-                }
-                .mens-cosme-banner-long {
-                    width: 640px;
-                }
-                //@cosme Appバナー
-                .atcosme-app-banner {
-                    width: 800px;
-                }
-                //beautydayバナー
-                .beautyday-banner {
-                    width: 400px;
-                }
-            }
+        &:last-child {
+          margin-top: 80px;
+          @include mq-up("md") {
+            margin-top: 0;
+          }
         }
+        .works-contents-bescos-img {
+          display: block;
+          width: 350px;
+          margin: 0 auto;
+          @include mq-up("md") {
+            width: 100%;
+            margin: 0 auto;
+          }
+          @include mq-up("sm") {
+            width: 100%;
+          }
+        }
+      }
     }
+  }
+  //banner 専用スタイル
+  .works-contents-banner {
+    width: 1000px;
+    margin: 120px auto;
+    @include mq-up("md") {
+      width: 375px;
+      margin: 80px auto;
+    }
+    @include mq-up("sm") {
+      width: auto;
+      margin: 40px 20px;
+    }
+    .works-contents-banner-list {
+      .works-contents-banner-item {
+        @include mq-up("md") {
+          margin: 0 auto 40px;
+        }
+        &:last-child {
+          margin-top: 80px;
+          @include mq-up("md") {
+            margin-top: 0;
+          }
+        }
+        .works-contents-banner-img {
+          display: block;
+          margin: 0 auto;
+          @include mq-up("md") {
+            width: 100%;
+            margin: 0 auto;
+          }
+          @include mq-up("sm") {
+            width: 100%;
+          }
+        }
+        //メンズコスメバナー
+        .mens-cosme-banner {
+          width: 640px;
+          @include mq-up("md") {
+            width: 400px;
+          }
+          @include mq-up("sm") {
+            width: 100%;
+          }
+        }
+        .mens-cosme-banner-long {
+          width: 640px;
+          @include mq-up("md") {
+            width: 400px;
+          }
+          @include mq-up("sm") {
+            width: 100%;
+          }
+        }
+        //@cosme Appバナー
+        .atcosme-app-banner {
+          width: 800px;
+          @include mq-up("md") {
+            width: 400px;
+          }
+          @include mq-up("sm") {
+            width: 100%;
+          }
+        }
+        //beautydayバナー
+        .beautyday-banner {
+          width: 400px;
+          @include mq-up("sm") {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }

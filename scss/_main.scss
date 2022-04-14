@@ -1,20 +1,55 @@
 @charset 'utf-8';
 
+@import "variables";
+
 #main {
-    padding-top: 85px;
-    .main-visual {
-        display: flex;
-        justify-content: flex-end;
-        .header-title {
-            font-size: 23px;
-            writing-mode: vertical-rl;
-            margin-right: 32px;
-            text-align: center;
-        }
-        .main-visual-box {
-            img {
-                width: 1200px;
-            }
-        }
+  padding-top: 85px;
+  @include mq-up("md") {
+    padding-top: 60px;
+  }
+  @include mq-up("sm") {
+    padding-top: 50px;
+  }
+  .main-visual {
+    display: flex;
+    justify-content: flex-end;
+    @include mq-up("md") {
+      display: block;
     }
+    .header-title {
+      font-size: 23px;
+      writing-mode: vertical-rl;
+      margin-right: 32px;
+      text-align: center;
+      @include mq-up("md") {
+        display: none;
+      }
+      @include mq-up("sm") {
+        display: none;
+      }
+    }
+    @include mq-up("md") {
+      .header-title {
+        writing-mode: horizontal-tb;
+        margin: 0 auto;
+      }
+    }
+    .main-visual-box {
+      .pc-main {
+        width: 1200px;
+      }
+      .sp-main {
+        display: none;
+      }
+      @include mq-up("md") {
+        .pc-main {
+          display: none;
+        }
+        .sp-main {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
 }

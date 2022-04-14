@@ -1,0 +1,14 @@
+$sizes: lg, md, sm;
+
+$breakpoint-up: (
+  "sm": "screen and (max-width: 600px)",
+  "md": "screen and (max-width: 1024px)",
+  "lg": "screen and (min-width: 1280px)",
+) !default;
+
+//mixinを定義（初期値はlg）
+@mixin mq-up($breakpoint: lg) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
