@@ -24,25 +24,11 @@
       width: auto;
       margin: 0 20px 40px;
     }
-    .nickname {
-      margin-bottom: 8px;
-      font-size: 16px;
-      @include mq-up("sm") {
-        font-size: 14px;
-      }
-    }
     .full-name {
-      margin-bottom: 8px;
+      margin-bottom:18px;
       font-size: 28px;
       @include mq-up("sm") {
         font-size: 22px;
-      }
-    }
-    .english-name {
-      margin-bottom: 30px;
-      font-size: 16px;
-      @include mq-up("sm") {
-        font-size: 14px;
       }
     }
     .profile {
