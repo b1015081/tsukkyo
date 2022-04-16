@@ -98,11 +98,58 @@
       .line1 {
         @include mq-up("md") {
           margin-top: 3px;
+          transition: 0.4s ease;
         }
       }
       .line2 {
         @include mq-up("md") {
           margin-top: 8px;
+          transition: 0.4s ease;
+        }
+      }
+      .btn-line1 {
+        transform: translateY(4.5px) rotate(-45deg);
+        transition: 0.4s ease;
+      }
+      .btn-line2 {
+        transform: translateY(-4.5px) rotate(45deg);
+        transition: 0.4s ease;
+      }
+    }
+    .hamburger-menu {
+      display: none;
+      @include mq-up("md") {
+        display: block;
+        position: fixed;
+        z-index: 30;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        margin: 50px 0 0;
+        background-color:rgba(0,0,0,0.9);
+      }
+      .menu-list {
+        padding-top: 60px;
+        li {
+          list-style: none;
+          padding: 20px;
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+      .sns-list {
+        display: flex;
+        justify-content: center; 
+        margin-top: 40px;
+        li {
+          padding-right: 30px;
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+        img {
+          height: 24px;
         }
       }
     }

@@ -1,8 +1,10 @@
 'use strict';
 
 new Vue({
-    el: '#app',
-    data: {
-        ActiveBtn: false
+  el: '#TOP',
+  data() {
+    return {
+      ActiveBtn: false
     }
+  }
 });

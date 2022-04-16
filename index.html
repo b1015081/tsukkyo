@@ -13,13 +13,12 @@
 <title>KYOSUKE TSUKAMOTO Portfolio</title>
 
 </head>
-<body id="app">
-
+<body>
+<div id="TOP">
 <header id="header">
 
 <!-- ↓スマホ・タブレット表示時↓ -->
 <h1 class="header-nav-title"><a href="#">KYOSUKE TSUKAMOTO</a></h1>
-<!-- ↓スマホ・タブレット表示時↓ -->
 
 <nav class="global-nav">
 <ul class="menu">
@@ -30,15 +29,30 @@
 </ul>
 <ul class="sns-link">
 <li><a href="https://twitter.com/kyonsu1170/" target="_blank" rel="noopener noreferrer"><img src="./images/icon/ico-twitter.png" alt="twitter"></a></li>
-<li><a href="https://www.instagram.com/tukkyo117/" target="_blank" rel="noopener noreferrer"><img src="./images/icon/icon-instagram.png" alt="instagram"></a></li>
 <li><a href="https://www.facebook.com/tsukkyo117/" target="_blank" rel="noopener noreferrer"><img src="./images/icon/icon-facebook.png" alt="facebook"></a></li>
 <!-- /sns-link --></ul>
 
 <!-- ↓スマホ・タブレット表示時↓ -->
-<div class="hamburger-button">
-<span class="line line1"></span>
-<span class="line line2"></span>
-<!-- /hamburger-button --></div>
+<div class="hamburger-button" v-on:click='ActiveBtn=!ActiveBtn'>
+<span class="line line1" v-bind:class="{'btn-line1':ActiveBtn}"></span>
+<span class="line line2" v-bind:class="{'btn-line2':ActiveBtn}"></span>
+</div>
+
+<!--サイドバー-->
+<transition name="hamburger-menu">
+<div class="hamburger-menu" v-show="ActiveBtn">
+<ul class="menu-list">
+<li><a href="index.html" v-on:click='ActiveBtn=!ActiveBtn'>TOP</a></li>
+<li><a href="#about" v-on:click='ActiveBtn=!ActiveBtn'>ABOUT</a></li>
+<li><a href="#skills" v-on:click='ActiveBtn=!ActiveBtn'>SKILLS</a></li>
+<li><a href="#works" v-on:click='ActiveBtn=!ActiveBtn'>WORKS</a></li>
+</ul>
+<ul class="sns-list">
+<li><a href="https://twitter.com/kyonsu1170/" target="_blank" rel="noopener noreferrer"><img src="./images/icon/ico-twitter.png" alt="twitter"></a></li>
+<li><a href="https://www.facebook.com/tsukkyo117/" target="_blank" rel="noopener noreferrer"><img src="./images/icon/icon-facebook.png" alt="facebook"></a></li>
+</ul>
+</div>
+</transition>
 <!-- ↑スマホ・タブレット表示時↑ -->
 
 <!-- /global-nav --></nav>
@@ -60,10 +74,9 @@
 <p class="nickname">つっきょ</p>
 <p class="full-name">塚本恭輔</p>
 <p class="english-name">Kyosuke Tsukamoto</p>
-<p class="profile">1997年生まれ　UI/UXデザイナー<br>東京都内の事業会社でWeb制作をしています。<br>2019年 公立はこだて未来大学 情報デザインコースを卒業し、日本最大のコスメサイト「@cosme」を運営する株式会社アイスタイルに新卒入社。<br>UI/UXデザイナーとして開発ディレクション、デザイン、コーディングなどの業務を行っています。</p>
+<p class="profile">UI/UXデザイナー・フロントエンドエンジニア<br><br>2019年 公立はこだて未来大学 情報デザインコースを卒業し、日本最大のコスメサイト「@cosme」を運営する株式会社アイスタイルに新卒入社。<br>UI/UXデザイナーとして開発ディレクション、デザイン、コーディングなどの業務を行う。<br>その後、フロントエンドエンジニアとして速度改善やNuxtでの開発に携わる。</p>
 <ul class="sns-link">
 <li><a href="https://twitter.com/kyonsu1170/" target="_blank" rel="noopener noreferrer"><img src="./images/icon/ico-twitter.png" alt="twitter"></a></li>
-<li><a href="https://www.instagram.com/tukkyo117/" target="_blank" rel="noopener noreferrer"><img src="./images/icon/icon-instagram.png" alt="instagram"></a></li>
 <li><a href="https://www.facebook.com/tsukkyo117" target="_blank" rel="noopener noreferrer"><img src="./images/icon/icon-facebook.png" alt="facebook"></a></li>
 <!-- /sns-link --></ul>
 <!-- /introduction-sentence --></div>
@@ -180,7 +193,11 @@
 <p class="copyright">© 2020 Kyosuke Tsukamoto.</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</div>
+
+<!-- ▼JS -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="./js/script.js"></script>
 
 </body>
 </html>
