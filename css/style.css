@@ -638,7 +638,7 @@ body {
 
 @media screen and (max-width: 600px) {
   #works .works-list .works-item {
-    margin: 0 20px 10px;
+    margin: 0 20px 15px;
   }
 }
 
