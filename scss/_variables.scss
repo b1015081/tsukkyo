@@ -1,9 +1,8 @@
 $sizes: lg, md, sm;
 
 $breakpoint-up: (
-  "sm": "screen and (max-width: 600px)",
-  "md": "screen and (max-width: 1024px)",
-  "lg": "screen and (min-width: 1280px)",
+  "sm": "screen and (max-width: 520px)",
+  "md": "screen and (max-width: 960px)",
 ) !default;
 
 //mixinを定義（初期値はlg）
