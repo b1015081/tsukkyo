@@ -40,7 +40,7 @@
 }
 
 .works-wrap {
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
   @include mq-up("md") {
     width: 600px;
@@ -148,7 +148,7 @@
     }
   }
   .works-contents {
-    width: 1000px;
+    width: 100%;
     margin: 80px auto;
     @include mq-up("md") {
       width: 375px;
@@ -173,6 +173,7 @@
         .works-contents-img {
           display: block;
           width: 1000px;
+          margin: 0 auto;
         }
       }
       .works-contents-item-sp {
