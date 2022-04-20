@@ -1,6 +1,5 @@
 body {
-  width: 1280px;
-  margin: 0 auto;
+  margin: 0 50px;
   color: #fff;
   background-color: #000;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -21,7 +20,7 @@ body {
 #header {
   position: fixed;
   top: 0;
-  width: 1280px;
+  width: 100%;
   background-color: #000;
 }
 
@@ -80,7 +79,9 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 40px 0 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-right: 50px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -118,7 +119,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 20px 0 50px;
+  margin: 0 50px 0 50px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -310,7 +311,7 @@ body {
 }
 
 #main .main-visual .main-visual-box .pc-main {
-  width: 1200px;
+  width: 100%;
 }
 
 #main .main-visual .main-visual-box .sp-main {
@@ -601,16 +602,19 @@ body {
   text-align: center;
 }
 
+#works {
+  margin: 0 auto;
+}
+
 #works .works-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 1260px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 80px auto 100px;
 }
 
@@ -645,7 +649,7 @@ body {
 }
 
 #works .works-list .works-item img {
-  width: 400px;
+  width: 380px;
   height: auto;
 }
 
@@ -1105,8 +1109,48 @@ body {
   }
 }
 
+.works-wrap .works-contents-loska-clinic .task-wrap {
+  width: 700px;
+  margin: 90px auto 0;
+  text-align: center;
+}
+
+.works-wrap .works-contents-loska-clinic .task-wrap .task-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+}
+
+.works-wrap .works-contents-loska-clinic .task-wrap .task-title::before, .works-wrap .works-contents-loska-clinic .task-wrap .task-title::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: #1cc6e1;
+}
+
+.works-wrap .works-contents-loska-clinic .task-wrap .task-title::before {
+  margin-right: 15px;
+}
+
+.works-wrap .works-contents-loska-clinic .task-wrap .task-title::after {
+  margin-left: 15px;
+}
+
+.works-wrap .works-contents-loska-clinic .task-wrap .task {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
 .works-wrap .works-contents-loska-clinic .target-wrap {
-  width: 650px;
+  width: 700px;
   margin: 90px auto 0;
   text-align: center;
 }
