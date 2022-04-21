@@ -2,10 +2,15 @@
 
 @import "variables";
 
+#header-wrap {
+  margin:0 auto;
+}
+
 #header {
   position: fixed;
   width: 100%;
-  right: 100px;
+  top: 0;
+  right: 7.5%;
   background-color: #000;
   @include mq-up("md") {
     display: flex;

@@ -15,12 +15,12 @@ $breakpoint-up: (
 }
 
 body {
-  margin: 0 100px;
+  margin: 0 50px;
   color: #fff;
   background-color: #000;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   @include mq-up("md") {
-    margin: 0;
+    margin: 0 auto;
   }
   @include mq-up("sm") {
   }
