@@ -3,11 +3,12 @@
 @import "variables";
 
 #skills {
+  max-width: 1280px;
+  margin: 70px auto 0;
   .skills-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 70px;
     @include mq-up("md") {
       margin: 40px 100px 0;
     }
