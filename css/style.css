@@ -19,7 +19,6 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  right: 7.5%;
   background-color: #000;
 }
 
@@ -80,6 +79,7 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding-top: 40px;
+  padding-right: 11%;
   padding-bottom: 20px;
 }
 

@@ -10,7 +10,6 @@
   position: fixed;
   width: 100%;
   top: 0;
-  right: 7.5%;
   background-color: #000;
   @include mq-up("md") {
     display: flex;
@@ -47,6 +46,7 @@
     display: flex;
     justify-content: flex-end;
     padding-top: 40px;
+    padding-right: 11%;
     padding-bottom: 20px;
     @include mq-up("md") {
       padding: 0;
