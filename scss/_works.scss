@@ -5,32 +5,36 @@
 #works {
   max-width: 1280px;
   margin: 0 auto;
+  @include mq-up("md") {
+    margin: 0 100px;
+  }
+  @include mq-up("sm") {
+    margin: 0 15px;
+  }
   .works-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
     margin: 80px auto 100px;
     @include mq-up("md") {
-      width: 600px;
-      margin: 80px auto 100px;
     }
     @include mq-up("sm") {
       width: 100%;
       margin: 40px auto 70px;
     }
     .works-item {
-      margin: 8px;
       @include mq-up("md") {
         margin: 0 0 20px;
       }
       @include mq-up("sm") {
-        margin: 0 20px 15px;
+        margin: 0;
       }
       img {
-        width: 360px;
+        width: 380px;
         height: auto;
         @include mq-up("md") {
-          width: 580px;
+          width: 100%;
         }
         @include mq-up("sm") {
           width: 100%;
@@ -41,14 +45,14 @@
 }
 
 .works-wrap {
-  width: 100%;
-  margin: 0 auto;
+  max-width: 1280px;
+  margin: 0 auto 120px;
+  padding: 0 50px;
   @include mq-up("md") {
-    width: 600px;
-    margin: 0 auto;
+    padding: 0 80px;
   }
   @include mq-up("sm") {
-    width: 100%;
+    padding: 0 15px;
   }
   .works-heading {
     display: flex;
@@ -83,52 +87,35 @@
     font-size: 36px;
     font-weight: bold;
     text-align: center;
-    @include mq-up("md") {
-      margin: 60px 20px 0;
-    }
-    @include mq-up("sm") {
-      margin: 50px 20px 0;
-      font-size: 22px;
-    }
-  }
-  .works-sentence {
-    width: 800px;
-    margin: 50px auto 0;
-    font-size: 15px;
     line-height: 1.6;
-    text-align: center;
     @include mq-up("md") {
-      width: auto;
-      margin: 50px 20px 0;
+      line-height: 1.6;
     }
     @include mq-up("sm") {
-      font-size: 14px;
-      line-height: 1.7;
+      margin: 30px auto 0;
+      font-size: 24px;
     }
   }
   .works-skills-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 80px;
+    margin-top: 60px;
     .works-skills-item {
-      width: 300px;
-      margin: 0 20px 40px;
+      margin: 0 40px 40px;
       @include mq-up("md") {
-        width: 250px;
       }
       @include mq-up("sm") {
         margin: 0 20px 60px;
       }
       .works-item-title {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         font-size: 16px;
         text-align: center;
       }
       .works-skill-icon-list {
         display: flex;
         justify-content: center;
-        width: 300px;
         margin: 0 auto;
         @include mq-up("md") {
           width: 250px;
@@ -148,345 +135,154 @@
       }
     }
   }
-  .works-contents {
-    width: 100%;
-    margin: 80px auto;
-    @include mq-up("md") {
-      width: 375px;
-      margin: 80px auto;
-    }
+  .works-main-visual {
+    margin-top: 40px;
     @include mq-up("sm") {
-      width: auto;
-      margin: 60px 20px;
+      margin-top: 20px;
     }
-    .works-contents-list {
-      @include mq-up("md") {
-        margin: 0 auto;
+    .external-link {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+      .external-link-word {
+        color: #1492e6;
       }
-      .works-contents-item {
-        margin: 0 auto 30px;
-        @include mq-up("md") {
-          display: none;
+      .external-link-img {
+        margin-left: 7px;
+      }
+    }
+    .main-visual-img {
+      width: 100%;
+    }
+  }
+  .project-detail {
+    margin-top: 80px;
+    @include mq-up("sm") {
+      margin-top: 40px;
+    }
+    .detail-list {
+      .detail-list-item {
+        margin-bottom: 50px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include mq-up("sm") {
+          margin-bottom: 30px;
+        }
+        .detail-title {
+          display: inline-block;
+          padding-bottom: 8px;
+          font-size: 20px;
+          font-weight: bold;
+          border-bottom: 1px solid #1cc6e1;
+          @include mq-up("sm") {
+            font-size: 16px;
+          }
+        }
+        .detail-text {
+          font-size: 17px;
+          margin-top: 20px;
+          line-height: 1.7;
+          @include mq-up("sm") {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+  .development-process {
+    margin-top: 100px;
+    @include mq-up("sm") {
+      margin-top: 60px;
+    }
+    .process-heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 80px;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      &::before,
+      &::after {
+        content: "";
+        width: 30px;
+        height: 1px;
+        background-color: #1cc6e1;
+      }
+      &::before {
+        margin-right: 10px;
+      }
+      &::after {
+        margin-left: 10px;
+      }
+      @include mq-up("md") {
+        margin-bottom: 60px;
+      }
+      @include mq-up("sm") {
+        margin-bottom: 40px;
+        font-size: 18px;
+      }
+    }
+    .process-list {
+      .process-list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 80px;
+        gap: 40px;
+        @include mq-up("sm") {
+          flex-flow: column;
+          gap: 20px;
+          margin-bottom: 50px;
         }
         &:last-child {
           margin-bottom: 0;
         }
-        .works-contents-img {
-          display: block;
-          width: 1000px;
-          margin: 0 auto;
+        &:nth-child(2n+1) {
+          flex-direction: row-reverse;
         }
-      }
-      .works-contents-item-sp {
-        display: none;
-        @include mq-up("md") {
-          display: block;
-          margin: 0 auto 30px;
+        &:nth-child(2n) {
+          flex-direction: row;
         }
-        &:last-child {
-          @include mq-up("md") {
-            margin-bottom: 0;
-          }
-        }
-        .works-contents-img {
-          display: block;
-          width: 375px;
-          margin: 0 auto 30px;
-          @include mq-up("md") {
-            width: 100%;
-            margin: 0 auto;
-          }
-          @include mq-up("sm") {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-  //外部リンク
-  .external-link {
-    display: flex;
-    justify-content: flex-end;
-    .external-link-word {
-      color: #1492e6;
-    }
-    .external-link-img {
-      margin-left: 7px;
-    }
-  }
-  .top-link {
-    margin-bottom: 14px;
-  }
-  .under-link {
-    margin-top: 14px;
-  }
-  //works-premium.html 専用スタイル
-  .works-contents-prm {
-    width: 375px;
-    margin: 120px auto;
-    @include mq-up("md") {
-      margin: 80px auto;
-    }
-    @include mq-up("sm") {
-      width: auto;
-      margin: 60px 20px;
-    }
-    .works-contents-prm-img {
-      display: block;
-      margin: 0 auto;
-      @include mq-up("sm") {
-        width: 100%;
-      }
-    }
-  }
-  //works-rd-consmer 専用スタイル
-  .works-contents-rd-consumer {
-    width: 100%;
-    margin: 80px auto;
-    @include mq-up("md") {
-      margin: 80px auto;
-    }
-    @include mq-up("sm") {
-      width: auto;
-      margin: 60px 20px;
-    }
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
-    li {
-      margin: 0 20px 20px 0;
-      &:last-child {
-        margin: 0;
-      }
-    }
-    .works-contents-rd-consumer-img {
-      display: block;
-      width: 300px;
-      margin: 0 auto;
-      @include mq-up("sm") {
-        width: 100%;
-      }
-    }
-  }
-  //works-rd-company 専用スタイル
-  .works-contents-rd-company {
-    width: 100%;
-    margin: 80px auto;
-    @include mq-up("md") {
-      margin: 80px auto;
-    }
-    @include mq-up("sm") {
-      width: auto;
-      margin: 60px 20px;
-    }
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    li {
-      margin-bottom: 20px;
-      &:last-child {
-        margin: 0;
-      }
-    }
-    .works-contents-rd-company-img {
-      display: block;
-      width: 1100px;
-      margin: 0 auto;
-      @include mq-up("sm") {
-        width: 100%;
-      }
-    }
-  }
-
-  //works-contents-loska-clinic 専用スタイル
-  .works-contents-loska-clinic {
-    width: 100%;
-    @include mq-up("md") {
-      margin: 80px auto;
-    }
-    @include mq-up("sm") {
-      width: auto;
-      margin: 60px 20px;
-    }
-    .main-visual {
-      width: 1100px;
-      margin: 60px auto 0;
-      .external-link {
-        .external-link-word {
-          color: #1492e6;
-        }
-        .external-link-img {
-          margin-left: 7px;
-        }
-      }
-      .works-contents-loska-clinic {
-        display: block;
-        width: 1100px;
-        margin: 0 auto;
-        @include mq-up("sm") {
-          width: 100%;
-        }
-      }
-    }
-    .task-wrap {
-      width: 700px;
-      margin: 90px auto 0;
-      text-align: center;
-      .task-title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 22px;
-        &::before,
-        &::after {
-          content: "";
-          width: 30px;
-          height: 1px;
-          background-color: #1cc6e1;
-        }
-        &::before {
-          margin-right: 15px;
-        }
-        &::after {
-          margin-left: 15px;
-        }
-      }
-      .task {
-        margin-top: 30px;
-        font-size: 18px;
-        line-height: 1.6;
-      }
-    }
-    .target-wrap {
-      width: 700px;
-      margin: 90px auto 0;
-      text-align: center;
-      .target-title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 22px;
-        &::before,
-        &::after {
-          content: "";
-          width: 30px;
-          height: 1px;
-          background-color: #1cc6e1;
-        }
-        &::before {
-          margin-right: 15px;
-        }
-        &::after {
-          margin-left: 15px;
-        }
-      }
-      .target {
-        margin-top: 30px;
-        font-size: 18px;
-        line-height: 1.6;
-      }
-    }
-    .process-wrap {
-      margin: 120px 0 150px;
-      .design-process {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 22px;
-        margin-bottom: 80px;
-        &::before,
-        &::after {
-          content: "";
-          width: 30px;
-          height: 1px;
-          background-color: #1cc6e1;
-        }
-        &::before {
-          margin-right: 15px;
-        }
-        &::after {
-          margin-left: 15px;
-        }
-      }
-      .process-section {
-        display: flex;
-        align-items: center;
-        margin-top: 80px;
         @include mq-up("md") {
           flex-wrap: wrap;
         }
         .process-text {
-          padding-right: 80px;
-          .title {
-            margin-top: 20px;
-            font-size: 36px;
-            font-weight: bold;
+          font-size: 17px;
+          line-height: 1.6;
+          width: 50%;
+          @include mq-up("md") {
+            width: 100%;
           }
-          .text {
-            margin-top: 30px;
-            font-size: 18px;
-            line-height: 1.5;
+          @include mq-up("sm") {
+            font-size: 14px;
+            line-height: 1.6;
           }
         }
-        .right {
-          padding: 0 0 0 80px;
-        }
-        .process-img {
-          width: 600px;
+        .process-img-wrap {
+          width: 50%;
+          @include mq-up("md") {
+            width: 100%;
+          }
+          .process-img {
+            display: block;
+            width: 100%;
+          }
         }
       }
-      .ingenuity-wrap {
-        margin-top: 120px;
-        .ingenuity {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 22px;
-          margin-bottom: 80px;
-          &::before,
-          &::after {
-            content: "";
-            width: 30px;
-            height: 1px;
-            background-color: #1cc6e1;
-          }
-          &::before {
-            margin-right: 15px;
-          }
-          &::after {
-            margin-left: 15px;
-          }
+      .ingenuity {
+        &:nth-child(2n) {
+          flex-direction: row-reverse;
         }
-        .ingenuity-section {
-          display: flex;
-          align-items: center;
-          margin-top: 80px;
-          @include mq-up("md") {
-            flex-wrap: wrap;
-          }
-          .ingenuity-text {
-            padding-right: 80px;
-            .text {
-              font-size: 36px;
-              font-weight: bold;
-              line-height: 1.5;
-            }
-          }
-          .right {
-            padding: 0 0 0 80px;
-          }
-          .ingenuity-img {
-            width: 600px;
-          }
+        &:nth-child(2n+1) {
+          flex-direction: row;
         }
       }
     }
-
   }
+
 
   //works-bescos.html 専用スタイル
   .works-contents-bescos {

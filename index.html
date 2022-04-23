@@ -17,57 +17,55 @@
 
 <body>
   <div id="TOP">
-    <div id="header-wrap">
-      <header id="header">
+    <header id="header">
+
+      <!-- ↓スマホ・タブレット表示時↓ -->
+      <h1 class="header-nav-title"><a href="#">KYOSUKE TSUKAMOTO</a></h1>
+
+      <nav class="global-nav">
+        <ul class="menu">
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#works">WORKS</a></li>
+        </ul>
+        <ul class="sns-link">
+          <li><a href="https://twitter.com/kyonsu1170/" target="_blank" rel="noopener noreferrer"><img
+                src="./images/icon/ico-twitter.png" alt="twitter"></a></li>
+          <li><a href="https://www.facebook.com/tsukkyo117/" target="_blank" rel="noopener noreferrer"><img
+                src="./images/icon/icon-facebook.png" alt="facebook"></a></li>
+          <!-- /sns-link -->
+        </ul>
 
         <!-- ↓スマホ・タブレット表示時↓ -->
-        <h1 class="header-nav-title"><a href="#">KYOSUKE TSUKAMOTO</a></h1>
+        <div class="hamburger-button" v-on:click='ActiveBtn=!ActiveBtn'>
+          <span class="line line1" v-bind:class="{'btn-line1':ActiveBtn}"></span>
+          <span class="line line2" v-bind:class="{'btn-line2':ActiveBtn}"></span>
+        </div>
 
-        <nav class="global-nav">
-          <ul class="menu">
-            <li><a href="index.html">TOP</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#works">WORKS</a></li>
-          </ul>
-          <ul class="sns-link">
-            <li><a href="https://twitter.com/kyonsu1170/" target="_blank" rel="noopener noreferrer"><img
-                  src="./images/icon/ico-twitter.png" alt="twitter"></a></li>
-            <li><a href="https://www.facebook.com/tsukkyo117/" target="_blank" rel="noopener noreferrer"><img
-                  src="./images/icon/icon-facebook.png" alt="facebook"></a></li>
-            <!-- /sns-link -->
-          </ul>
-
-          <!-- ↓スマホ・タブレット表示時↓ -->
-          <div class="hamburger-button" v-on:click='ActiveBtn=!ActiveBtn'>
-            <span class="line line1" v-bind:class="{'btn-line1':ActiveBtn}"></span>
-            <span class="line line2" v-bind:class="{'btn-line2':ActiveBtn}"></span>
+        <!--サイドバー-->
+        <transition name="hamburger-menu">
+          <div class="hamburger-menu" v-show="ActiveBtn">
+            <ul class="menu-list">
+              <li><a href="index.html" v-on:click='ActiveBtn=!ActiveBtn'>TOP</a></li>
+              <li><a href="#about" v-on:click='ActiveBtn=!ActiveBtn'>ABOUT</a></li>
+              <li><a href="#skills" v-on:click='ActiveBtn=!ActiveBtn'>SKILLS</a></li>
+              <li><a href="#works" v-on:click='ActiveBtn=!ActiveBtn'>WORKS</a></li>
+            </ul>
+            <ul class="sns-list">
+              <li><a href="https://twitter.com/kyonsu1170/" target="_blank" rel="noopener noreferrer"><img
+                    src="./images/icon/ico-twitter.png" alt="twitter"></a></li>
+              <li><a href="https://www.facebook.com/tsukkyo117/" target="_blank" rel="noopener noreferrer"><img
+                    src="./images/icon/icon-facebook.png" alt="facebook"></a></li>
+            </ul>
           </div>
+        </transition>
+        <!-- ↑スマホ・タブレット表示時↑ -->
 
-          <!--サイドバー-->
-          <transition name="hamburger-menu">
-            <div class="hamburger-menu" v-show="ActiveBtn">
-              <ul class="menu-list">
-                <li><a href="index.html" v-on:click='ActiveBtn=!ActiveBtn'>TOP</a></li>
-                <li><a href="#about" v-on:click='ActiveBtn=!ActiveBtn'>ABOUT</a></li>
-                <li><a href="#skills" v-on:click='ActiveBtn=!ActiveBtn'>SKILLS</a></li>
-                <li><a href="#works" v-on:click='ActiveBtn=!ActiveBtn'>WORKS</a></li>
-              </ul>
-              <ul class="sns-list">
-                <li><a href="https://twitter.com/kyonsu1170/" target="_blank" rel="noopener noreferrer"><img
-                      src="./images/icon/ico-twitter.png" alt="twitter"></a></li>
-                <li><a href="https://www.facebook.com/tsukkyo117/" target="_blank" rel="noopener noreferrer"><img
-                      src="./images/icon/icon-facebook.png" alt="facebook"></a></li>
-              </ul>
-            </div>
-          </transition>
-          <!-- ↑スマホ・タブレット表示時↑ -->
-
-          <!-- /global-nav -->
-        </nav>
-        <!-- /header -->
-      </header>
-    </div>
+        <!-- /global-nav -->
+      </nav>
+      <!-- /header -->
+    </header>
 
     <div id="main">
       <div class="main-visual">
@@ -86,7 +84,7 @@
           <div class="introduction-sentence">
             <p class="full-name">塚本恭輔</p>
             <p class="profile">UI/UXデザイナー / フロントエンドエンジニア<br><br>2019年 公立はこだて未来大学
-              情報デザインコースを卒業し、日本最大のコスメサイト「@cosme」を運営する株式会社アイスタイルに新卒入社。<br>UI/UXデザイナーとして開発ディレクション、デザイン、コーディングなどの業務を行う。<br>その後、フロントエンドエンジニアとして速度改善やNuxtでのスクラム開発に携わる。
+              情報デザインコースを卒業し、日本最大のコスメサイト「@cosme」を運営する株式会社アイスタイルに新卒入社。<br>UI/UXデザイナーとして、会員ページやログイン周りの開発ディレクション、デザイン、コーディングなどの業務を専任で担当する。<br>その後、フロントエンドエンジニアとして@cosme Webサイトにおける速度改善や、Nuxtでのスクラム開発に携わる。<br>現在、副業としてMarketing Demo株式会社のサービス開発におけるデザイン領域を専任で担当。
             </p>
             <ul class="sns-link">
               <li><a href="https://twitter.com/kyonsu1170/" target="_blank" rel="noopener noreferrer"><img
@@ -212,10 +210,9 @@
                 alt=""></a></li>
           <li class="works-item"><a href="./works/works-premium.html"><img src="./images/works/premium-min.png"
                 alt=""></a></li>
+          <li class="works-item"><a href="./works/works-webVitals.html"><img src="./images/works/webvitals-top-min.png" alt=""></a></li>
           <li class="works-item"><a href="./works/works-privacy.html"><img src="./images/works/privacy-min.png"
                 alt=""></a></li>
-          <li class="works-item"><a href="./works/works-mail-magazine.html"><img
-                src="./images/works/mail-magazine-min.png" alt=""></a></li>
           <li class="works-item"><a href="./works/works-bescos.html"><img src="./images/works/bescos-min.png"
                 alt=""></a></li>
           <li class="works-item"><a href="./works/works-mens-cosme.html"><img src="./images/works/mens-cosme-min.png"
