@@ -39,12 +39,34 @@
         </ul>
 
         <!-- ↓スマホ・タブレット表示時↓ -->
-        <div class="hamburger-button">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <!-- /hamburger-button -->
+        <div class="hamburger-button" v-on:click='ActiveBtn=!ActiveBtn'>
+          <span class="line line1" v-bind:class="{'btn-line1':ActiveBtn}"></span>
+          <span class="line line2" v-bind:class="{'btn-line2':ActiveBtn}"></span>
         </div>
-        <!-- ↑スマホ・タブレット表示時↑ -->
+
+        <!--サイドバー-->
+        <transition name="hamburger-menu">
+          <div class="hamburger-menu" v-show="ActiveBtn">
+            <ul class="menu-list">
+              <li><a href="../index.html" v-on:click='ActiveBtn=!ActiveBtn'>TOP</a></li>
+              <li><a href="../index.html#about" v-on:click='ActiveBtn=!ActiveBtn'>ABOUT</a></li>
+              <li><a href="../index.html#skills" v-on:click='ActiveBtn=!ActiveBtn'>SKILLS</a></li>
+              <li><a href="../index.html#works" v-on:click='ActiveBtn=!ActiveBtn'>WORKS</a></li>
+            </ul>
+            <ul class="sns-list">
+              <li>
+                <a href="https://twitter.com/kyonsu1170/" target="_blank" rel="noopener noreferrer">
+                  <img src="../images/icon/ico-twitter.png" alt="twitter">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/tsukkyo117/" target="_blank" rel="noopener noreferrer">
+                  <img src="../images/icon/icon-facebook.png" alt="facebook">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </transition>
 
         <!-- /global-nav -->
       </nav>
@@ -185,6 +207,10 @@
     </footer>
 
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script src="../js/script.js"></script>
+
 </body>
 
 </html>
